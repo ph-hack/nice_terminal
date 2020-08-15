@@ -1,0 +1,14 @@
+# dots return directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+
+# directory utilities
+function mkdirgo { mkdir $1; cd $1; }
+
+# docker utilities
+alias lsdocker="docker image ls; docker container ls;"
+alias lsadocker="docker image ls -a; docker container ls -a;"
+rmcontainer() { docker container rm $1; }
+rmimage() { docker image rm $1; }
